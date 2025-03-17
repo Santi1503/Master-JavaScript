@@ -1,0 +1,348 @@
+:root {
+    --bg-layout: white;
+    --color-primary: #1F87C4;
+    --color-text-logo: white;
+    --bg-nav: #333333;
+    --color-link: white;
+    --color-shadow: #B7B4B4;
+    --color-date : #8b8b8b;
+    --color-light: #59b0e2;
+    --color-collapse-header: #f6f6f6;
+}
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("../img/cielo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "slider slider"
+    "main aside";
+    grid-template-columns: 70% 30%;
+    max-width: 128rem;
+    background-color: var(--bg-layout);
+    padding: 3rem;
+    margin: 2rem auto;
+}
+
+.layout_header {
+    grid-area: header;
+    margin-bottom: 2rem;
+}
+
+.header_logo {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--color-primary);
+}
+
+.logo_text {
+    color: var(--color-text-logo);
+    font-size: 5rem;
+}
+
+.header_nav {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--bg-nav);
+    padding: 0 2rem;
+}
+
+.nav_list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.list_link {
+    height: 100%;
+    color: var(--color-link);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 300ms linear;
+}
+
+.list_item:hover {
+    background-color: var(--color-primary);
+}
+
+.layout_slider {
+    grid-area: slider;
+    width: 100%;
+    height: 40rem;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid var(--color-text-logo);
+    box-shadow: 0px 0px 5px var(--color-shadow);
+    margin-bottom: 4rem;
+}
+
+.slider_btn-prev,
+.slider_btn-next {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    left: 1rem;
+    top: calc(50% - 2.5rem);
+    z-index: 2;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: var(--bg-nav);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-link);
+    font-size: 4rem;
+}
+
+.slider_btn-next {
+    left: auto;
+    right: 1rem;
+}
+
+.slides_item {
+    position: absolute;
+    transition: opacity 600ms linear;
+    opacity: 0;
+}
+
+.slides_item--active {
+    opacity: 1;
+}
+
+.layout_articles,
+.layout_main {
+    grid-area: main;
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.articles_article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.article_title {
+    font-size: 3rem;
+}
+
+.article_date {
+    color: var(--color-date);
+}
+
+.article_body {
+    text-align: justify;
+}
+
+.article_btn {
+    width: 12rem;
+    padding: 1.5rem 1rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-link);
+    transition: all 300ms linear;
+    text-align: center;
+}
+
+.article_btn:hover {
+    background-color: var(--color-light);
+}
+
+.layout_aside {
+    grid-area: aside;
+}
+
+.aside_header {
+    margin-bottom: 4rem;
+}
+
+.header_container-title {
+    margin-bottom: 2rem;
+}
+
+.header_title,
+.login_title {
+    text-align: center;
+    line-height: 1rem;
+    background: url("../img/lines.png") repeat-x;
+}
+
+.title_span {
+    background-color: var(--bg-layout);
+    padding: 0.5rem;
+}
+
+.header_description {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.aside_login {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login_container-title {
+    margin-bottom: 1.5rem;
+}
+
+.login_form-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.login_input {
+    width: 100%;
+    border: 2px solid var(--color-shadow);
+    outline: none;
+    transition: all 300ms linear;
+}
+
+.login_input:focus {
+    border-color: var(--color-primary);
+}
+
+.login_submit {
+    padding: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--color-shadow);
+    transform: all 300ms linear;
+}
+
+.login_submit:hover {
+    border-color: var(--color-primary);
+}
+
+.footer {
+    max-width: 128rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-nav);
+    color: var(--bg-layout);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+}
+
+.footer_top {
+    cursor: pointer;
+}
+
+.aside_data--hide {
+    display: none;
+}
+
+.aside_login--hide {
+    display: none;
+}
+
+.main_title {
+    font-size: 3rem;
+}
+
+.main_accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.collapse_header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-shadow);
+    cursor: pointer;
+    background-color: var(--color-collapse-header);
+}
+
+.collapse_header > .fa-solid {
+    font-size: 1.5rem;
+    position: absolute;
+}
+
+.collapse_header > .fa-chevron-down {
+     opacity: 1;
+}
+
+.collapse_header > .fa-chevron-up {
+    opacity: 0;
+}
+
+.collapse_title {
+    font-size: 1.8rem;
+    margin-left: 2rem;
+}
+
+.collapsee_body {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid var(--color-shadow);
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0 0 5px 5px;
+    transition: max-height 300ms ease;
+}
+
+.collapse_text {
+    padding: 2rem;
+}
+
+.accordion_collapse--open .collapsee_body {
+    max-height: 999px;
+    border-bottom: 1px solid var(--color-shadow);
+    transition: all 700ms ease-in-out;
+}
+
+.accordion_collapse--open .collapse_header {
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: none;
+    color: white;
+    background-color: var(--color-primary);
+}
+
+.accordion_collapse--open .fa-chevron-down{
+    opacity: 0;
+}
+
+.accordion_collapse--open .fa-chevron-up{
+    opacity: 1;
+}
+
+.main_clock {
+    width: 100%;
+    border: 5px dashed var(--bg-nav);
+}
+
+.clock_time {
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+}

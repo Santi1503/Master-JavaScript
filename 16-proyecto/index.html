@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/slider.js" defer></script>
+    <script src="./assets/js/articles.js" defer></script>
+    <script src="./assets/js/login.js" defer></script>
+    <title>Proyecto de JS</title>
+</head>
+<body>
+    <div class="layout">
+        <header class="layout_header">
+            <div class="header_logo">
+                <h1 class="logo_text">PROYECTO JS</h1>
+            </div>
+
+            <nav class="header_nav">
+                <ul class="nav_list">
+                    <li class="list_item">
+                        <a href="index.html" class="list_link">INICIO</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="reloj.html" class="list_link">RELOJ</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="sobre-mi.html" class="list_link">SOBRE MI</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="contacto.html" class="list_link">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="layout_slider">
+            <button class="slider_btn-prev">
+                <i class="slider_icon fa-solid fa-caret-left"></i>
+            </button>
+
+            <div class="slider_slides">
+                <article class="slides_item slides_item--active">
+                    <img src="./assets/img/hojas.jpg" alt="hojas" class="slides_img">
+                </article>
+
+                <article class="slides_item">
+                    <img src="./assets/img/cielo.jpg" alt="cielo" class="slides_img">
+                </article>
+
+                <article class="slides_item">
+                    <img src="./assets/img/rojo.jpg" alt="rojo" class="slides_img">
+                </article>
+            </div>
+
+            <button class="slider_btn-next">
+                <i class="slider_icon fa-solid fa-caret-right"></i>
+            </button>
+        </section>
+
+        <main class="layout_articles">
+        </main>
+
+        <aside class="layout_aside">
+            <header class="aside_header">
+                <div class="header_container-title">
+                    <h3 class="header_title">
+                        <span class="title_span">¿Quién soy?</span>
+                    </h3>
+                </div>
+
+
+                <div class="header_container-img">
+                    <img src="./assets/img/caracol.jpg" alt="" class="header_img">
+                </div>
+                <p class="header_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo incidunt suscipit, veniam dolores, eum laboriosam cumque dolor perspiciatis quod similique necessitatibus maiores reiciendis facere ipsam sapiente debitis ipsum, nobis ipsa.</p>
+
+            </header>
+
+            <form action="" class="aside_login">
+                <div class="login_container-title">
+                    <h3 class="login_title">
+                        <span class="title_span">Identificate</span>
+                    </h3>
+                </div>
+
+                <div class="login_form-group">
+                    <label for="name" class="login_label">Nombre:</label>
+                    <input type="text" class="login_input" id="name" name="name" placeholder="Ingrese su nombre" required>
+                </div>
+
+                <div class="login_form-group">
+                    <label for="email" class="login_label">Email:</label>
+                    <input type="email" class="login_input" id="email" name="email" placeholder="Ingrese su email" required>
+                </div>
+
+                <div class="login_form-group">
+                    <label for="password" class="login_label">Contraseña:</label>
+                    <input type="password" class="login_input" id="password" name="password" placeholder="Ingrese su constraseña" required>
+                </div>
+
+                <input type="submit" value="Entrar" class="login_submit" />
+            </form>
+
+            <div class="aside_data aside_data--hide">
+                <p class="data_text">Bienvenido, <span class="data_name"></span>
+                </p>
+                <button class="data_logout">Cerrar sesión</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <p class="footer_text">Todos los derechos reservados a SGOMEZDEV &copy; 2025</p>
+        <p class="footer_top">Ir arriba</p>
+    </footer>
+
+    <div class="themes">
+        <div class="theme_green"></div>
+        <div class="theme_red"></div>
+        <div class="theme_blue"></div>
+    </div>
+</body>
+</html>
