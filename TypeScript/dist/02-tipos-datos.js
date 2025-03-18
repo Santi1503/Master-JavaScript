@@ -1,0 +1,13 @@
+let nombre = "Juan";
+const nacionalidad = "Guatemala";
+let pais = nacionalidad;
+let habitantes = 10000000;
+let verdadero = true;
+let locura = "HOLAaaaaaaaa";
+locura = 100;
+let arreglo = [1, 2, 3, 4, 5];
+let lenguajes = ["JavaScript", "TypeScript", "Python"];
+let arreglo2 = [1, 2, 3, 4, 5];
+let sindefinir = undefined;
+let nulaull = null;
+let nombreEdad = "Juan";
